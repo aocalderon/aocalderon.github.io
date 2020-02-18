@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Andres Calderon webpage"
+title                    : ""
 title_separator          : "-"
 name                     : &name "Andres Calderon"
 description              : &description "PhD Student at UCR"

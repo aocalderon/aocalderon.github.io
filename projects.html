@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,7 +70,66 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Projects – Home">
 <meta property="og:site_name" content="Home">
@@ -100,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="./projects2/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -146,19 +207,39 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ul>
-<li><p><a href="https://www1.upme.gov.co/Documents/Enfoque-territorial/Resultados_convenios/3_Metodologia_desarrollo_aplicacion_Andes_v2.pdf">Atlas of Residual Biomass</a> — Expansion of the proof of concept for the energy atlas of agricultural residual biomass in Colombia. Mining and Energy Planning Unit (UPME) and Universidad de los Andes. 2023.</p></li>
-<li><p><a href="https://www1.upme.gov.co/Documents/Coop_internacional/2_GIZ/Informe_03_Productos_D_E_F_G.pdf">SenecAtlas</a> — Visualization platform for solar and residual biomass explorers for Colombia. Part of the Triangular Cooperation project “Construction of a system that integrates solar energy and agricultural residual biomass explorers for Colombia and Chile.” <a href="https://www.giz.de/en/worldwide/397.html">GIZ</a>, Universidad Católica de Chile, and Universidad de los Andes. 2023.</p></li>
-<li><p><a href="https://www.cs.ucr.edu/~acald013/public/UniAndes/integral.pdf">Integral</a> — Geodatabase of communities and study territories for the selection of the test case. Part of the Triangular Cooperation project “Construction of a system that integrates solar energy and agricultural residual biomass explorers for Colombia and Chile.” GIZ, Universidad Católica de Chile, and Universidad de los Andes. 2023.</p></li>
-<li><p><a href="http://geoalternar.udenar.edu.co:8080/GEOAlternar/">Geoalternar</a> — Visualization platform for the study of existing alternative energy sources in the department of Nariño. Part of the project “Analysis of Energy Opportunities with Alternative Sources in the Department of Nariño.” Universidad de Nariño. 2015.</p></li>
-<li><p><a href="https://editorial.udenar.edu.co/?p=2383">Student Dropout</a> — “Detection of Student Dropout Patterns using Data Mining: Case Study of Universidad de Nariño and Institución Universitaria CESMAG.” Universidad de Nariño. 2015.</p></li>
-<li><p><a href="https://www.cs.ucr.edu/~acald013/public/UdeNar/sigeodep.pdf">SIGEODEP</a> — “Detection of crime patterns using data mining techniques in the crime observatory of the municipality of Pasto.” Universidad de Nariño. 2014.</p></li>
-<li><p><a href="https://www.cs.ucr.edu/~acald013/public/UdeNar/cancer.pdf">Cancer</a> — “Detection of survival patterns of women with cervical cancer in the cancer population registry of the municipality of Pasto.” Universidad de Nariño. 2011.</p></li>
-</ul>
 
 
 
-</main> <!-- /main -->
+
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1732201904993" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="./projects2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="projects2/images/atlas.webp" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Projects
+</h5>
+<div class="card-text listing-description">
+
+
+
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

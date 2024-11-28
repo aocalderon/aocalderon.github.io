@@ -2,5 +2,21 @@
   {
     "listing": "/projects/index.html",
     "items": []
+  },
+  {
+    "listing": "/proyectos.html",
+    "items": [
+      "/projects2/index.html"
+    ]
+  },
+  {
+    "listing": "/projects2/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects2/index.html"
+    ]
   }
 ]

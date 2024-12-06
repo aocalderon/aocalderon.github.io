@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,12 +35,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-84e1d056d509915bd990d0792f0c4617.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6e86d487f8532c3b73a750adc390a42b.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -163,7 +163,8 @@ ul.task-list li input[type="checkbox"] {
 <p>[13] R. T. Pereira, A. O. Calderon Romero, and J. J. Toledo, ‘Detección de Patrones de Deserción Estudiantil con Minería de Datos Caso de Estudio: Universidad de Nariño e Institución Universitaria CESMAG’ | Editorial Universidad de Nariño’. ISBN: <a href="https://editorial.udenar.edu.co/?p=2383">979-958-8958-38-5</a></p>
 <section id="on-submission" class="level3">
 <h3 class="anchored" data-anchor-id="on-submission">On submission:</h3>
-<p>[14] H. Núñez, A. O. Calderon Romero, N. Díaz, R. Sierra, and D. Vásquez, ‘Potencial de la inteligencia artificial en teledetección para el desarrollo sostenible y la gestión ambiental’. Available at <a href="https://www.cs.ucr.edu/~acald013/public/UniAndes/teledeteccion.pdf"><i class="fas fa-file-pdf"></i></a>.</p>
+<p><br>
+[14] H. Núñez, A. O. Calderon Romero, N. Díaz, R. Sierra, and D. Vásquez, ‘Potencial de la inteligencia artificial en teledetección para el desarrollo sostenible y la gestión ambiental’. Available at <a href="https://www.cs.ucr.edu/~acald013/public/UniAndes/teledeteccion.pdf"><i class="fas fa-file-pdf"></i></a>.</p>
 <p>[15] A. O. Calderon Romero, P. Balakov, M. Vieira, and V. J. Tsotras, ‘Scalable Processing of Moving Flock Patterns’. Available at <a href="https://www.cs.ucr.edu/~acald013/public/UCR/pflocks.pdf"><i class="fas fa-file-pdf"></i></a>.</p>
 <p>[16] A. O. Calderon Romero, L. Abdelhafeez, G. Trajcevski, A. Magdy, and V. J. Tsotras, ‘On Scalable DCEL Overlay Operations’. Available at <a href="https://www.cs.ucr.edu/~acald013/public/UCR/geoinformatica.pdf"><i class="fas fa-file-pdf"></i></a>.</p>
 
@@ -397,8 +398,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -509,7 +508,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

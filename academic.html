@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,12 +35,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-84e1d056d509915bd990d0792f0c4617.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-6e86d487f8532c3b73a750adc390a42b.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -151,17 +151,23 @@ ul.task-list li input[type="checkbox"] {
 <li>Ph.D.&nbsp;Computer Science (2024). University of California, Riverside, CA.
 <ul>
 <li>Focus areas: Big spatial data, distributed spatial data structures and parallel algorithms for movement patterns discovery.</li>
-<li><a href="https://github.com/aocalderon/thesis/blob/main/thesis.pdf">Thesis</a>: <em>Scaling Spatial Overlay Operations and Flock Pattern Discovery</em> (under supervision of Prof.&nbsp;<a href="https://profiles.ucr.edu/app/home/profile/vtsotras">Vassilis Tsotras</a>.</li>
+<li><a href="https://github.com/aocalderon/thesis/blob/main/thesis.pdf">Thesis</a>: <em>Scaling Spatial Overlay Operations and Flock Pattern Discovery</em> (under supervision of Prof.&nbsp;<a href="https://profiles.ucr.edu/app/home/profile/vtsotras">Vassilis Tsotras</a>.<br>
+<br>
+</li>
 </ul></li>
 <li>M.Sc. Geo-Information Science and Earth Observation (2011). University of Twente, Enschede, the Netherlands.
 <ul>
 <li>Focus areas: Geo-informatics and Spatial Data Mining.</li>
-<li><a href="http://essay.utwente.nl/84888/">Thesis</a>: <em>Mining moving flock patterns in large spatio-temporal datasets using a frequent pattern mining approach</em>.</li>
+<li><a href="http://essay.utwente.nl/84888/">Thesis</a>: <em>Mining moving flock patterns in large spatio-temporal datasets using a frequent pattern mining approach</em>.<br>
+<br>
+</li>
 </ul></li>
 <li>Systems Engineering (2007). Universidad de Nariño, Pasto, Colombia.
 <ul>
 <li>Focus areas: Databases and Data Mining</li>
-<li><a href="https://www.researchgate.net/publication/290273687_TariyKDD_A_data_mining_tool_loosely_coupled_with_a_DBMS">Thesis</a>: <em>TariyKDD: A data mining tool loosely coupled with a DBMS</em>.</li>
+<li><a href="https://www.researchgate.net/publication/290273687_TariyKDD_A_data_mining_tool_loosely_coupled_with_a_DBMS">Thesis</a>: <em>TariyKDD: A data mining tool loosely coupled with a DBMS</em>.<br>
+<br>
+</li>
 </ul></li>
 </ul>
 
@@ -394,8 +400,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -506,7 +510,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
